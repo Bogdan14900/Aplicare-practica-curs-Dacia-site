@@ -5,6 +5,8 @@ import pages.EvaluareMasinaPage;
 import pages.HomePage;
 import sharedData.Hooks;
 
+import static org.testng.Assert.assertTrue;
+
 public class TestFlowEstimareMasina extends Hooks {
 
     @Test
@@ -12,9 +14,8 @@ public class TestFlowEstimareMasina extends Hooks {
 
         HomePage homePage = new HomePage(getDriver());
         homePage.clickAcceptareCookies();
-        homePage.elementMethods.pause(1000);
         homePage.clickEvaluareMasina();
-        homePage.elementMethods.pause(1000);
+
 
         EvaluareMasinaPage evaluareMasinaPage = new EvaluareMasinaPage(getDriver());
         evaluareMasinaPage.tabMethods.switchSpecificTab(1);
@@ -37,8 +38,8 @@ public class TestFlowEstimareMasina extends Hooks {
         evaluareMasinaPage.clickNextButton();
         evaluareMasinaPage.clickFirstOwnerOption("da");
 
-        evaluareMasinaPage.selectFrontTiresCondition("Ca noi");
-
+        evaluareMasinaPage.clickTiresCondition("Front","Ca noi");
+        evaluareMasinaPage.clickTiresCondition("Back","Ca noi");
     }
 
 }

@@ -64,14 +64,11 @@ public class EvaluareMasinaPage extends BasePage{
     @FindBy(css=".FunnelSelect_firstHand button")
     private List<WebElement> firstOwnerOptions;
 
-    @FindBy(xpath = "//li[contains(@class, 'PictureSelect__item')]//button[.//div[text()='{OPTION_TEXT}']]")
-    private WebElement frontTires;
+    @FindBy(xpath="//div[@class='FunnelSelect FunnelSelect_tiresFront']")
+    private WebElement frontTiresSelector;
 
-
-
-
-
-
+    @FindBy(xpath="//div[@class='FunnelSelect FunnelSelect_tiresBack']")
+    private WebElement rearTiresSelector;
 
 
     public void clickAcceptareCookies(){
@@ -161,20 +158,10 @@ public class EvaluareMasinaPage extends BasePage{
         firstOwnerOptions.get(index).click();
     }
 
-    public void selectFrontTiresCondition(String optionText) {
-        String dynamicXPath = ".//button[.//div[text()='" + optionText + "']]";
-        WebElement option = frontTires.findElement(By.xpath(dynamicXPath));
+    public void clickTiresCondition(String side, String optionText) {
+        elementMethods.pause(500);
+        WebElement element = side.equalsIgnoreCase("front") ? frontTiresSelector : rearTiresSelector;
+        WebElement option = element.findElement(By.xpath(".//button/div[text()='" + optionText + "']"));
         option.click();
     }
-
-
-
-
-
-
-
-
-
-
-
 }

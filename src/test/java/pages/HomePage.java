@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
         super(driver);
@@ -23,33 +23,75 @@ public class HomePage extends BasePage{
     @FindBy(id = "onetrust-accept-btn-handler")
     private WebElement optiuneAcceptareCookies;
 
-    public void clickAcceptareCookies(){
+    @FindBy(xpath = "//div[@class='NavigationToggle__menuToggleIcon']")
+    private WebElement hamburgerButton;
+
+    @FindBy(xpath = "//span[text()='Noul Bigster']")
+    private WebElement daciaBigster;
+
+    @FindBy(xpath = "//div[@class='EditorialContentZone']//a[text()='Vezi toate ofertele']")
+    private WebElement toateOfertele;
+
+    @FindBy(xpath = "//div[@class=\"MainHeaderEntry\"]")
+    private WebElement butttonAchizitioneaza;
+
+    @FindBy(xpath = "//a[@class='MainHeaderEntry__link'][contains(text(),'Cere o ofertă')]")
+    private WebElement buttonCereOferta;
+
+
+    public void clickAcceptareCookies() {
         elementMethods.waitVisibleElement(optiuneAcceptareCookies);
         elementMethods.clickJSElement(optiuneAcceptareCookies);
         loggerUtility.infoLog("User accepts cookies");
     }
 
-    public void clickRezervaOnline(){
+    public void clickRezervaOnline() {
         elementMethods.clickJSElement(optiuneRezervaOnline);
         loggerUtility.infoLog("User clicks on the Rezerva Online option");
     }
 
-    public void clickConfigureaza(){
+    public void clickConfigureaza() {
         elementMethods.clickJSElement(optiuneConfigurare);
         loggerUtility.infoLog("User clicks on the Configureaza option");
     }
 
-    public void clickEvaluareMasina(){
+    public void clickEvaluareMasina() {
         elementMethods.clickJSElement(optiuneEvaluareMasina);
         loggerUtility.infoLog("User clicks on the Rezerva Online option");
     }
 
+    public void clickClickHamburger() {
+        elementMethods.clickJSElement(hamburgerButton);
+        loggerUtility.infoLog("User clicks hamburger buttion");
+    }
 
+    public void clickDaciaBigster() {
+        elementMethods.clickJSElement(daciaBigster);
+        loggerUtility.infoLog("User clicks on the Dacia Bigster option");
+    }
 
+    public void clickToateOfertele() {
+        elementMethods.scrollToElementJS(toateOfertele);
+        elementMethods.clickJSElement(toateOfertele);
+        loggerUtility.infoLog("User clicks on the Toate Ofertele option");
+    }
 
+    public void clickAchizitioneaza() {
+        elementMethods.hoverOverElement(butttonAchizitioneaza);
+        loggerUtility.infoLog("User clicks on the Achizitioneaza option");
+    }
 
-
-
-
+    public void clickCereOferta() {
+        elementMethods.clickJSElement(buttonCereOferta);
+        loggerUtility.infoLog("User clicks on the Cere oferta option");
+    }
 
 }
+
+
+
+
+
+
+
+

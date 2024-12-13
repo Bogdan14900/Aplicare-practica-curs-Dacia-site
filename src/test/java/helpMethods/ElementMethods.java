@@ -1,6 +1,7 @@
 package helpMethods;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -64,6 +65,15 @@ public class ElementMethods {
         option.click();
     }
 
+    public void setSelectOption(WebElement dropdownElement, String text) {
+        waitVisibleElement(dropdownElement);
+        dropdownElement.click();
+        String optionXpath = "//option[text()='" + text + "']";
+        WebElement option = dropdownElement.findElement(By.xpath(optionXpath));
+        waitVisibleElement(option);
+        option.click();
+    }
+
 
     public void clearEditElement(WebElement element, String text){
         waitVisibleElement(element);
@@ -78,6 +88,16 @@ public class ElementMethods {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
+    }
+
+    public void scrollToElementJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void hoverOverElement(WebElement element){
+        Actions builder = new Actions(driver);
+        builder.moveToElement(element).perform();
     }
 
 }

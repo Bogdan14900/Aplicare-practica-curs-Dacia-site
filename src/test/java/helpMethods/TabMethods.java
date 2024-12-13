@@ -12,6 +12,11 @@ public class TabMethods {
         this.driver = driver;
     }
 
+    public int countTabs(){
+        List<String> tabsList = new ArrayList<>(driver.getWindowHandles());
+        return tabsList.size();
+    }
+
     public void switchSpecificTab(int index){
         List<String> tabsList = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabsList.get(index));
