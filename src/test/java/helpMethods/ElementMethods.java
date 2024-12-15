@@ -100,4 +100,10 @@ public class ElementMethods {
         builder.moveToElement(element).perform();
     }
 
+    public void selectRadioButton(WebElement radioButton) {
+        if (!radioButton.isSelected()) {
+            radioButton.click(); // Select the radio button if not already selected
+        }
+    }
+
 }

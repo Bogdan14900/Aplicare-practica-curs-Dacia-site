@@ -32,10 +32,56 @@ public class ConfigurareLoganFullPage extends BasePage{
     @FindBy(xpath = "//span[text()='CONFORT']")
     private WebElement openConfortSelector;
 
+    @FindBy(xpath = "//p[text()='Pachet Clima']")
+    private WebElement openPachetClimaSelector;
+
+    @FindBy(xpath = "//span[text()='SIGURANTA']")
+    private WebElement openSigurantaSelector;
+
+    @FindBy(xpath = "//p[text()='Pachet Parking']")
+    private WebElement openPachetParkingSelector;
+
+    @FindBy(xpath = "//p[text()='Husa scaun spate de protectie pentru caini']")
+    private WebElement openHusaScaunCainiSelector;
+
+    @FindBy(xpath = "//p[text()='Umeraș pe tetieră - Dacia']")
+    private WebElement openUmerasTetieraSelector;
+
+    @FindBy(xpath = "//p[text()='Suport multifunctional pe tetiera']")
+    private WebElement openSuportMultifunctionalTetieraSelector;
+
+    @FindBy(xpath = "//span[text()='GPS, AUDIO, VIDEO']")
+    private WebElement openNavigationSelector;
+
+    @FindBy(xpath = "//p[text()='Suport magnetic pentru smartphone pe aerator']")
+    private WebElement openSuportMagneticSelector;
+
+    @FindBy(xpath = "//span[text()='CONFORT SI PROTECTIE']")
+    private WebElement openConfortSiProtectieSelector;
+
+    @FindBy(xpath = "//p[text()='Masina de cafea mobila Handpresso']")
+    private WebElement openMasinaCafeaSelector;
+
+    @FindBy(xpath = "//p[text()='Carlig si sistem multifunctional']")
+    private WebElement openCarligSistemSelector;
+
+    @FindBy(xpath = "//p[text()='Umeras si sistem multifunctional']")
+    private WebElement openUmerasSistemSelector;
+
+    @FindBy(xpath = "//p[text()='Tableta spate pentru sistemul multifunctional']")
+    private WebElement openTabletaSpateSelector;
+
+    @FindBy(xpath = "//p[text()='Protecție iluminate pentru praguri uși față Logan']")
+    private WebElement openProtectieIluminateSelector;
+
+    @FindBy(xpath = "//span[text()='DESIGN']")
+    private WebElement openDesignSelector;
+
+
     @FindBy(xpath = "//div[text()='Preț total']")
     private WebElement textPretTotal;
 
-    @FindBy(xpath = "//span[text()='17.710 EUR']")
+    @FindBy(xpath = "//span[contains(@class, 'OneConfigReceiptSummaryPrice__price') and contains(text(), '19.477')]")
     private WebElement textSumaTotal;
 
 
@@ -78,14 +124,106 @@ public class ConfigurareLoganFullPage extends BasePage{
         loggerUtility.infoLog("User clicks on the open confort selector.");
     }
 
+    public void clickOpenPachetClimaSelector() {
+        elementMethods.scrollToElementJS(openPachetClimaSelector);
+        elementMethods.clickJSElement(openPachetClimaSelector);
+        loggerUtility.infoLog("User clicks on the open pachet clima selector.");
+    }
+
+    public void clickOpenSigurantaSelector() {
+        elementMethods.scrollToElementJS(openSigurantaSelector);
+        elementMethods.clickJSElement(openSigurantaSelector);
+        loggerUtility.infoLog("User clicks on the open siguranta selector.");
+    }
+
+    public void clickOpenPachetParkingSelector() {
+        elementMethods.scrollToElementJS(openPachetParkingSelector);
+        elementMethods.clickJSElement(openPachetParkingSelector);
+        loggerUtility.infoLog("User clicks on the open pachet parking selector.");
+    }
+
+
+    public void clickOpenHusaScaunCainiSelector() {
+        elementMethods.scrollToElementJS(openHusaScaunCainiSelector);
+        elementMethods.clickJSElement(openHusaScaunCainiSelector);
+        loggerUtility.infoLog("User clicks on the husa scaun spate de protectie pentru caini selector.");
+    }
+
+    public void clickOpenUmerasTetieraSelector() {
+        elementMethods.scrollToElementJS(openUmerasTetieraSelector);
+        elementMethods.clickJSElement(openUmerasTetieraSelector);
+        loggerUtility.infoLog("User clicks on the umeraș pe tetieră selector.");
+    }
+
+    public void clickOpenSuportMultifunctionalTetieraSelector() {
+        elementMethods.scrollToElementJS(openSuportMultifunctionalTetieraSelector);
+        elementMethods.clickJSElement(openSuportMultifunctionalTetieraSelector);
+        loggerUtility.infoLog("User clicks on the suport multifunctional pe tetiera selector.");
+    }
+
+    public void clickNavigationSelector() {
+        elementMethods.scrollToElementJS(openNavigationSelector);
+        elementMethods.clickJSElement(openNavigationSelector);
+        loggerUtility.infoLog("User clicks on the navigation selector.");
+    }
+
+    public void clickOpenSuportMagneticSelector() {
+        elementMethods.scrollToElementJS(openSuportMagneticSelector);
+        elementMethods.clickJSElement(openSuportMagneticSelector);
+        loggerUtility.infoLog("User clicks on the open suport magnetic selector.");
+    }
+
+    public void clickOpenConfortSiProtectieSelector() {
+        elementMethods.scrollToElementJS(openConfortSiProtectieSelector);
+        elementMethods.clickJSElement(openConfortSiProtectieSelector);
+        loggerUtility.infoLog("User clicks on the open confort si protectie selector.");
+    }
+
+    public void clickOpenMasinaCafeaSelector() {
+        elementMethods.scrollToElementJS(openMasinaCafeaSelector);
+        elementMethods.clickJSElement(openMasinaCafeaSelector);
+        loggerUtility.infoLog("User clicks on the open masina de cafea selector.");
+    }
+
+    public void clickOpenCarligSistemSelector() {
+        elementMethods.scrollToElementJS(openCarligSistemSelector);
+        elementMethods.clickJSElement(openCarligSistemSelector);
+        loggerUtility.infoLog("User clicks on the open carlig si sistem selector.");
+    }
+
+    public void clickOpenUmerasSistemSelector() {
+        elementMethods.scrollToElementJS(openUmerasSistemSelector);
+        elementMethods.clickJSElement(openUmerasSistemSelector);
+        loggerUtility.infoLog("User clicks on the open umeras si sistem selector.");
+    }
+
+    public void clickOpenTabletaSpateSelector() {
+        elementMethods.scrollToElementJS(openTabletaSpateSelector);
+        elementMethods.clickJSElement(openTabletaSpateSelector);
+        loggerUtility.infoLog("User clicks on the open tableta spate selector.");
+    }
+
+    public void clickOpenDesignSelector() {
+        elementMethods.scrollToElementJS(openDesignSelector);
+        elementMethods.clickJSElement(openDesignSelector);
+        loggerUtility.infoLog("User clicks on the open design selector.");
+    }
+
+    public void clickOpenProtectieIluminateSelector() {
+        elementMethods.scrollToElementJS(openProtectieIluminateSelector);
+        elementMethods.clickJSElement(openProtectieIluminateSelector);
+        loggerUtility.infoLog("User clicks on the open protectie iluminate selector.");
+    }
+
+
     public boolean isPretTotal(){
-        elementMethods.scrollToElementJS(textPretTotal);
+//        elementMethods.scrollToElementJS(textPretTotal);
         elementMethods.waitVisibleElement(textPretTotal);
         return textPretTotal.isDisplayed();
     }
 
     public boolean textSumaTotal(){
-        elementMethods.scrollToElementJS(textSumaTotal);
+//        elementMethods.scrollToElementJS(textSumaTotal);
         elementMethods.waitVisibleElement(textSumaTotal);
         return textSumaTotal.isDisplayed();
     }

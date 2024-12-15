@@ -18,6 +18,8 @@ public class EvaluareMasinaPage extends BasePage{
         super(driver);
     }
 
+    //locators
+
     @FindBy(xpath = "//button[@title='Apasă pentru a selecta vehiculul']")
     private WebElement butonIncepereEvaluare;
 
@@ -70,7 +72,7 @@ public class EvaluareMasinaPage extends BasePage{
     @FindBy(xpath="//div[@class='FunnelSelect FunnelSelect_tiresBack']")
     private WebElement rearTiresSelector;
 
-
+    //methods
     public void clickAcceptareCookies(){
         elementMethods.clickJSElement(optiuneAcceptareCookies);
         loggerUtility.infoLog("User accepts cookies");
@@ -81,14 +83,30 @@ public class EvaluareMasinaPage extends BasePage{
         loggerUtility.infoLog("User click on 'Apasa aici pentru a incepe procesul de evaluare!' button");
     }
 
-    public void clickAlegereAnInmatriculare(){
-        elementMethods.clickJSElement(anPrimaInmatriculare.get(2));
-        loggerUtility.infoLog("User clicks on the third year in the list");
+
+    public void clickAlegereAnInmatriculare(String year) {
+        for (WebElement element : anPrimaInmatriculare) {
+            if (element.getText().trim().equals(year)) {
+                elementMethods.clickJSElement(element);
+                loggerUtility.infoLog("User clicks on the year: " + year);
+                return;
+            }
+        }
     }
 
-    public void clickAlegereLunaInmatriculare(){
-        elementMethods.clickJSElement(lunaPrimaInmatriculare.get(2));
-        loggerUtility.infoLog("User clicks on the third month in the list");
+//    public void clickAlegereLunaInmatriculare(){
+//        elementMethods.clickJSElement(lunaPrimaInmatriculare.get(2));
+//        loggerUtility.infoLog("User clicks on the third month in the list");
+//    }
+
+    public void clickAlegereLunaInmatriculare(int monthIndex){
+        // Add a check to ensure the index is valid
+        if (monthIndex < 0 || monthIndex >= lunaPrimaInmatriculare.size()) {
+            throw new IllegalArgumentException("Invalid month index. Must be between 0 and " + (lunaPrimaInmatriculare.size() - 1));
+        }
+
+        elementMethods.clickJSElement(lunaPrimaInmatriculare.get(monthIndex));
+        loggerUtility.infoLog("User clicks on month at index: " + monthIndex);
     }
 
 
@@ -164,4 +182,11 @@ public class EvaluareMasinaPage extends BasePage{
         WebElement option = element.findElement(By.xpath(".//button/div[text()='" + optionText + "']"));
         option.click();
     }
+
+
+
 }
+
+
+
+

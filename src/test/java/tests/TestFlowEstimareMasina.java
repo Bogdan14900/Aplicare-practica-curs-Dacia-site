@@ -5,7 +5,7 @@ import pages.EvaluareMasinaPage;
 import pages.HomePage;
 import sharedData.Hooks;
 
-import static org.testng.Assert.assertTrue;
+import java.util.Arrays;
 
 public class TestFlowEstimareMasina extends Hooks {
 
@@ -14,14 +14,15 @@ public class TestFlowEstimareMasina extends Hooks {
 
         HomePage homePage = new HomePage(getDriver());
         homePage.clickAcceptareCookies();
+        homePage.elementMethods.pause(1000);
         homePage.clickEvaluareMasina();
-
+        homePage.elementMethods.pause(1000);
 
         EvaluareMasinaPage evaluareMasinaPage = new EvaluareMasinaPage(getDriver());
         evaluareMasinaPage.tabMethods.switchSpecificTab(1);
         evaluareMasinaPage.clickIncepereEvaluare();
-        evaluareMasinaPage.clickAlegereAnInmatriculare();
-        evaluareMasinaPage.clickAlegereLunaInmatriculare();
+        evaluareMasinaPage.clickAlegereAnInmatriculare("2011");
+        evaluareMasinaPage.clickAlegereLunaInmatriculare(2);
 
         evaluareMasinaPage.clickOpenDropDownList();
         evaluareMasinaPage.clickCarFromList("SKODA");
@@ -38,8 +39,11 @@ public class TestFlowEstimareMasina extends Hooks {
         evaluareMasinaPage.clickNextButton();
         evaluareMasinaPage.clickFirstOwnerOption("da");
 
-        evaluareMasinaPage.clickTiresCondition("Front","Ca noi");
-        evaluareMasinaPage.clickTiresCondition("Back","Ca noi");
+        evaluareMasinaPage.clickTiresCondition("front","Ca noi");
+        evaluareMasinaPage.clickTiresCondition("back","Uzate 50%");
+
+
+
     }
 
 }

@@ -25,8 +25,24 @@ public class TestConfigurareLoganFullOption extends Hooks {
         configurareLoganFullPage.clickOptionJante();
         configurareLoganFullPage.clickOptionPachetTehno();
         configurareLoganFullPage.clickOpenConfortSelector();
+        configurareLoganFullPage.clickOpenPachetClimaSelector();
+        configurareLoganFullPage.clickOpenSigurantaSelector();
+        configurareLoganFullPage.clickOpenPachetParkingSelector();
+        configurareLoganFullPage.clickOpenHusaScaunCainiSelector();
+        configurareLoganFullPage.clickOpenUmerasTetieraSelector();
+        configurareLoganFullPage.clickOpenSuportMultifunctionalTetieraSelector();
+        configurareLoganFullPage.clickNavigationSelector();
+        configurareLoganFullPage.clickOpenSuportMagneticSelector();
+        configurareLoganFullPage.clickOpenConfortSiProtectieSelector();
+        configurareLoganFullPage.clickOpenMasinaCafeaSelector();
+        configurareLoganFullPage.clickOpenCarligSistemSelector();
+        configurareLoganFullPage.clickOpenUmerasSistemSelector();
+        configurareLoganFullPage.clickOpenTabletaSpateSelector();
+        configurareLoganFullPage.clickOpenDesignSelector();
+        configurareLoganFullPage.clickOpenProtectieIluminateSelector();
+
         assertTrue(configurareLoganFullPage.isPretTotal());
-        assertTrue(configurareLoganFullPage.isPretTotal());
+        assertTrue(configurareLoganFullPage.textSumaTotal());
 
 
     }

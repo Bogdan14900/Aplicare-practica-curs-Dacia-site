@@ -33,8 +33,23 @@ public class OfertePage extends BasePage {
     @FindBy(id = "contactFormCivility")
     private WebElement civility;
 
-//    @FindBy(xpath = "//div[@class='CustomSelect__input']")
-//    private WebElement listSelect;
+    @FindBy(xpath = "//div[contains(@class, 'TextField__wrapper')]/input[@type='text' and contains(@name, 'identity[firstName]')]")
+    private WebElement lastNameField;
+
+    @FindBy(xpath = "//div[contains(@class, 'TextField__wrapper')]/input[@type='text' and contains(@name, 'identity[lastName]')]")
+    private WebElement firstNameField;
+
+    @FindBy(xpath = "//div[contains(@class, 'TextField__wrapper')]/input[@type='email' and contains(@name, 'identity[email]')]")
+    private WebElement emailField;
+
+    @FindBy(xpath = "//div[contains(@class, 'TextField__wrapper')]/input[@type='tel' and contains(@name, 'identity[phone]')]")
+    private WebElement phoneNumberField;
+
+    @FindBy(xpath = "//label[@for='contactFormGeneralOption-1']")
+    private WebElement buttonNoToMarketing;
+
+
+
 
 
     public void selectOffer(int i) {
@@ -66,4 +81,40 @@ public class OfertePage extends BasePage {
         elementMethods.setSelectOption(civility,options.get(i));
         loggerUtility.infoLog("User selects an option from the dropdown. Index: " + i);
     }
+
+    public void enterLastName(String firstName) {
+        elementMethods.scrollToElementJS(lastNameField);
+        lastNameField.clear();
+        lastNameField.sendKeys(firstName);
+        loggerUtility.infoLog("User enters the last name: " + firstName);
+    }
+
+    public void enterFirstName(String firstName) {
+        elementMethods.scrollToElementJS(firstNameField);
+        firstNameField.clear();
+        firstNameField.sendKeys(firstName);
+        loggerUtility.infoLog("User enters the first name: " + firstName);
+    }
+
+    public void enterEmail(String email) {
+        elementMethods.scrollToElementJS(emailField);
+        emailField.clear();
+        emailField.sendKeys(email);
+        loggerUtility.infoLog("User enters the email: " + email);
+    }
+
+    public void enterPhoneNumber(String phoneNumber) {
+        elementMethods.scrollToElementJS(phoneNumberField);
+        phoneNumberField.clear(); // Clear the field before entering the phone number
+        phoneNumberField.sendKeys(phoneNumber); // Enter the phone number
+        loggerUtility.infoLog("User enters the phone number: " + phoneNumber);
+    }
+
+    public void selectGeneralOptOut() {
+        buttonNoToMarketing.click(); // Click on the associated label
+    }
+
+
+
+
 }

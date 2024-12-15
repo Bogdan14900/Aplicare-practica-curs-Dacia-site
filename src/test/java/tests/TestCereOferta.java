@@ -27,5 +27,14 @@ public class TestCereOferta extends Hooks {
         assertTrue(ofertePage.isAutoCobalcescuDisplayed());
         ofertePage.clickAlegeButton();
         ofertePage.setNamedropdownOptions(1);
+        ofertePage.enterLastName("Ionut");
+        ofertePage.enterFirstName("Dumitru");
+        ofertePage.enterEmail("bogdaniancu90@gmail.com");
+        ofertePage.enterPhoneNumber("0722000011");
+        ofertePage.selectGeneralOptOut();
+
+        //Nu am mai facut locator si metoda sa dau click pe Trimite deoarece nu am vrut sa spamez support teamul de la Dacia
+
+
     }
 }
