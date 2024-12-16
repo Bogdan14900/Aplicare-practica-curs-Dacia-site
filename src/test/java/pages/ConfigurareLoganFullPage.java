@@ -109,35 +109,48 @@ public class ConfigurareLoganFullPage extends BasePage{
 
     public void clickOptionJante() {
         elementMethods.scrollToElementJS(optionJante);
+        elementMethods.waitVisibleElement(optionJante);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(optionJante);
         loggerUtility.infoLog("User clicks on the Jante option.");
     }
 
     public void clickOptionPachetTehno() {
         elementMethods.scrollToElementJS(optionPachetTehno);
+        elementMethods.waitVisibleElement(optionPachetTehno);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(optionPachetTehno);
         loggerUtility.infoLog("User clicks on the Pachet Tehno option.");
     }
 
     public void clickOpenConfortSelector() {
+        elementMethods.scrollToElementJS(openConfortSelector);
+        elementMethods.waitVisibleElement(openConfortSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openConfortSelector);
         loggerUtility.infoLog("User clicks on the open confort selector.");
     }
 
     public void clickOpenPachetClimaSelector() {
         elementMethods.scrollToElementJS(openPachetClimaSelector);
+        elementMethods.waitVisibleElement(openPachetClimaSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openPachetClimaSelector);
         loggerUtility.infoLog("User clicks on the open pachet clima selector.");
     }
 
     public void clickOpenSigurantaSelector() {
         elementMethods.scrollToElementJS(openSigurantaSelector);
+        elementMethods.waitVisibleElement(openSigurantaSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openSigurantaSelector);
         loggerUtility.infoLog("User clicks on the open siguranta selector.");
     }
 
     public void clickOpenPachetParkingSelector() {
         elementMethods.scrollToElementJS(openPachetParkingSelector);
+        elementMethods.waitVisibleElement(openPachetParkingSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openPachetParkingSelector);
         loggerUtility.infoLog("User clicks on the open pachet parking selector.");
     }
@@ -145,72 +158,95 @@ public class ConfigurareLoganFullPage extends BasePage{
 
     public void clickOpenHusaScaunCainiSelector() {
         elementMethods.scrollToElementJS(openHusaScaunCainiSelector);
+        elementMethods.waitVisibleElement(openHusaScaunCainiSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openHusaScaunCainiSelector);
         loggerUtility.infoLog("User clicks on the husa scaun spate de protectie pentru caini selector.");
     }
 
     public void clickOpenUmerasTetieraSelector() {
         elementMethods.scrollToElementJS(openUmerasTetieraSelector);
+        elementMethods.waitVisibleElement(openUmerasTetieraSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openUmerasTetieraSelector);
         loggerUtility.infoLog("User clicks on the umeraș pe tetieră selector.");
     }
 
     public void clickOpenSuportMultifunctionalTetieraSelector() {
         elementMethods.scrollToElementJS(openSuportMultifunctionalTetieraSelector);
+        elementMethods.waitVisibleElement(openSuportMultifunctionalTetieraSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openSuportMultifunctionalTetieraSelector);
         loggerUtility.infoLog("User clicks on the suport multifunctional pe tetiera selector.");
     }
 
     public void clickNavigationSelector() {
         elementMethods.scrollToElementJS(openNavigationSelector);
+        elementMethods.waitVisibleElement(openNavigationSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openNavigationSelector);
         loggerUtility.infoLog("User clicks on the navigation selector.");
     }
 
     public void clickOpenSuportMagneticSelector() {
         elementMethods.scrollToElementJS(openSuportMagneticSelector);
+        elementMethods.waitVisibleElement(openSuportMagneticSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openSuportMagneticSelector);
         loggerUtility.infoLog("User clicks on the open suport magnetic selector.");
     }
 
     public void clickOpenConfortSiProtectieSelector() {
         elementMethods.scrollToElementJS(openConfortSiProtectieSelector);
+        elementMethods.waitVisibleElement(openConfortSiProtectieSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openConfortSiProtectieSelector);
         loggerUtility.infoLog("User clicks on the open confort si protectie selector.");
     }
 
     public void clickOpenMasinaCafeaSelector() {
         elementMethods.scrollToElementJS(openMasinaCafeaSelector);
+        elementMethods.waitVisibleElement(openMasinaCafeaSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openMasinaCafeaSelector);
         loggerUtility.infoLog("User clicks on the open masina de cafea selector.");
     }
 
     public void clickOpenCarligSistemSelector() {
         elementMethods.scrollToElementJS(openCarligSistemSelector);
+        elementMethods.waitVisibleElement(openCarligSistemSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openCarligSistemSelector);
         loggerUtility.infoLog("User clicks on the open carlig si sistem selector.");
     }
 
     public void clickOpenUmerasSistemSelector() {
         elementMethods.scrollToElementJS(openUmerasSistemSelector);
+        elementMethods.waitVisibleElement(openUmerasSistemSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openUmerasSistemSelector);
         loggerUtility.infoLog("User clicks on the open umeras si sistem selector.");
     }
 
     public void clickOpenTabletaSpateSelector() {
         elementMethods.scrollToElementJS(openTabletaSpateSelector);
+        elementMethods.waitVisibleElement(openTabletaSpateSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openTabletaSpateSelector);
         loggerUtility.infoLog("User clicks on the open tableta spate selector.");
     }
 
     public void clickOpenDesignSelector() {
         elementMethods.scrollToElementJS(openDesignSelector);
+        elementMethods.waitVisibleElement(openDesignSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openDesignSelector);
         loggerUtility.infoLog("User clicks on the open design selector.");
     }
 
     public void clickOpenProtectieIluminateSelector() {
         elementMethods.scrollToElementJS(openProtectieIluminateSelector);
+        elementMethods.pause(1000);
         elementMethods.clickJSElement(openProtectieIluminateSelector);
         loggerUtility.infoLog("User clicks on the open protectie iluminate selector.");
     }

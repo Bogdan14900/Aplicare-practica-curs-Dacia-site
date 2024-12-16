@@ -52,6 +52,8 @@ public class OfertePage extends BasePage {
 
 
 
+
+
     public void selectOffer(int i) {
         elementMethods.clickJSElement(promoLinks.get(i));
         loggerUtility.infoLog("User clicks on some offer. Index: " + i);
@@ -82,11 +84,11 @@ public class OfertePage extends BasePage {
         loggerUtility.infoLog("User selects an option from the dropdown. Index: " + i);
     }
 
-    public void enterLastName(String firstName) {
+    public void enterLastName(String lastName) {
         elementMethods.scrollToElementJS(lastNameField);
         lastNameField.clear();
-        lastNameField.sendKeys(firstName);
-        loggerUtility.infoLog("User enters the last name: " + firstName);
+        lastNameField.sendKeys(lastName);
+        loggerUtility.infoLog("User enters the last name: " + lastName);
     }
 
     public void enterFirstName(String firstName) {
@@ -113,6 +115,7 @@ public class OfertePage extends BasePage {
     public void selectGeneralOptOut() {
         buttonNoToMarketing.click(); // Click on the associated label
     }
+
 
 
 

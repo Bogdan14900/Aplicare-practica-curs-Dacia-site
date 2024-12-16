@@ -13,6 +13,9 @@ public class TestVizulizareOferte extends Hooks {
     @Test
     public void metodaTest() {
 
+        //Scurta descriere a testului:
+        //Acest test deschide sectiunea de oferte curente de pe pagina Dacia, da click pe fiecare oferta la fiecare model, si valideaza textul cu modelul, motorizarea si pretul ofertei
+
 
         HomePage homePage = new HomePage(getDriver());
         VizualizareOfertePage vizualizareOfertePage = new VizualizareOfertePage(getDriver());

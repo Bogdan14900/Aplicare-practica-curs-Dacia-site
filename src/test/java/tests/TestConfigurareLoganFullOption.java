@@ -12,6 +12,10 @@ public class TestConfigurareLoganFullOption extends Hooks {
     @Test
     public void metodaTest() {
 
+        //Scurta descriere test:
+        //Acest test configureaza un model de Dacia Logan versiunea Expression cu motor TCe 90 CVT culoare IronBlue, Jante Randia si selecteaza majoritatea echipamentelor
+        //din sectiunile ce urmeaza, validand in final ca pretul este the 19.477 euro.
+
         HomePage homePage = new HomePage(getDriver());
         ConfigurareLoganFullPage configurareLoganFullPage = new ConfigurareLoganFullPage(getDriver());
 
@@ -24,20 +28,26 @@ public class TestConfigurareLoganFullOption extends Hooks {
         configurareLoganFullPage.clickOptionCuloareMasina();
         configurareLoganFullPage.clickOptionJante();
         configurareLoganFullPage.clickOptionPachetTehno();
+
         configurareLoganFullPage.clickOpenConfortSelector();
         configurareLoganFullPage.clickOpenPachetClimaSelector();
+
         configurareLoganFullPage.clickOpenSigurantaSelector();
         configurareLoganFullPage.clickOpenPachetParkingSelector();
+
         configurareLoganFullPage.clickOpenHusaScaunCainiSelector();
         configurareLoganFullPage.clickOpenUmerasTetieraSelector();
         configurareLoganFullPage.clickOpenSuportMultifunctionalTetieraSelector();
+
         configurareLoganFullPage.clickNavigationSelector();
         configurareLoganFullPage.clickOpenSuportMagneticSelector();
+
         configurareLoganFullPage.clickOpenConfortSiProtectieSelector();
         configurareLoganFullPage.clickOpenMasinaCafeaSelector();
         configurareLoganFullPage.clickOpenCarligSistemSelector();
         configurareLoganFullPage.clickOpenUmerasSistemSelector();
         configurareLoganFullPage.clickOpenTabletaSpateSelector();
+
         configurareLoganFullPage.clickOpenDesignSelector();
         configurareLoganFullPage.clickOpenProtectieIluminateSelector();
 

@@ -72,6 +72,38 @@ public class EvaluareMasinaPage extends BasePage{
     @FindBy(xpath="//div[@class='FunnelSelect FunnelSelect_tiresBack']")
     private WebElement rearTiresSelector;
 
+    @FindBy(xpath = "//span[text()='date contact']")
+    private WebElement optiuneDateContact;
+
+    @FindBy(id = "tfid-0-0")
+    private WebElement genderSelectElement;
+
+    @FindBy(xpath = "//input[@name='identity[firstname]']")
+    private WebElement lastNameField;
+
+    @FindBy(xpath = "//input[@name='identity[lastname]']")
+    private WebElement firstNameField;
+
+    @FindBy(xpath = "//input[@name='identity[email]']")
+    private WebElement emailField;
+
+    @FindBy(xpath = "//input[@name='identity[phone]']")
+    private WebElement phoneField;
+
+    @FindBy(css = ".BlockSelect__element")
+    private List<WebElement> vehicleSelectionElements;
+
+    @FindBy(css=".CheckboxWrap__boxContainer")
+    private WebElement fillCheckbox;
+
+    @FindBy(xpath= "//label[@for='tfid-0-6-1']")
+    private WebElement noMarketing;
+
+    @FindBy(xpath="//span[text()='partener']")
+    private WebElement buttonPartner;
+
+
+
     //methods
     public void clickAcceptareCookies(){
         elementMethods.clickJSElement(optiuneAcceptareCookies);
@@ -94,10 +126,6 @@ public class EvaluareMasinaPage extends BasePage{
         }
     }
 
-//    public void clickAlegereLunaInmatriculare(){
-//        elementMethods.clickJSElement(lunaPrimaInmatriculare.get(2));
-//        loggerUtility.infoLog("User clicks on the third month in the list");
-//    }
 
     public void clickAlegereLunaInmatriculare(int monthIndex){
         // Add a check to ensure the index is valid
@@ -183,6 +211,76 @@ public class EvaluareMasinaPage extends BasePage{
         option.click();
     }
 
+    public void clickDateContact(){
+        elementMethods.clickJSElement(optiuneDateContact);
+        loggerUtility.infoLog("User clicks Date Contact button");
+    }
+
+    public void setNamedropdownOptions(int i) {
+        List<String> options = List.of("Dna", "Dl", "Nu mă pronunț");
+        if (i < 0 || i >= options.size()) {
+            loggerUtility.errorLog("Invalid index for dropdown options: " + i);
+            throw new IndexOutOfBoundsException("Invalid index for dropdown options: " + i);
+        }
+        String selectedOption = options.get(i);
+        elementMethods.setSelectOption(genderSelectElement, selectedOption);
+        loggerUtility.infoLog("User selects an option from the dropdown. Index: " + i + ", Option: " + selectedOption);
+    }
+
+    public void enterLastName(String lastName) {
+        elementMethods.scrollToElementJS(lastNameField);
+        lastNameField.clear();
+        lastNameField.sendKeys(lastName);
+        loggerUtility.infoLog("User enters the last name: " + lastName);
+    }
+
+    public void enterFirstName(String firstName) {
+        elementMethods.scrollToElementJS(firstNameField);
+        firstNameField.clear();
+        firstNameField.sendKeys(firstName);
+        loggerUtility.infoLog("User enters the last name: " + firstName);
+    }
+
+    public void enterEmail(String email) {
+        elementMethods.scrollToElementJS(emailField);
+        emailField.clear();
+        emailField.sendKeys(email);
+        loggerUtility.infoLog("User enters the last name: " + email);
+    }
+
+    public void enterPhoneNumber(String email) {
+        elementMethods.scrollToElementJS(phoneField);
+        phoneField.clear();
+        phoneField.sendKeys(email);
+        loggerUtility.infoLog("User enters the last name: " + email);
+    }
+
+    public void selectVehicleOption(String optionText) {
+        for (WebElement element : vehicleSelectionElements) {
+            WebElement content = element.findElement(By.cssSelector(".Button__content"));
+            String text = content.getText().trim();
+            if (text.equalsIgnoreCase(optionText.trim())) {
+                element.click();
+                break;
+            }
+        }
+    }
+
+    public void clickCheckbox(){
+        elementMethods.clickJSElement(fillCheckbox);
+        loggerUtility.infoLog("User clicks the next step button");
+    }
+
+
+    public void clickNoMarketing(){
+        elementMethods.selectRadioButton(noMarketing);
+        loggerUtility.infoLog("User clicks no marketing");
+    }
+
+    public void clickPartnerButton(){
+        elementMethods.clickJSElement(buttonPartner);
+        loggerUtility.infoLog("User clicks Partner button");
+    }
 
 
 }

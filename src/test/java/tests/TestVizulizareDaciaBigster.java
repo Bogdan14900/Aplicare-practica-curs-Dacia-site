@@ -12,6 +12,9 @@ public class TestVizulizareDaciaBigster extends Hooks {
     @Test
     public void metodaTest() {
 
+        //Scurta descriere test:
+        //Acest test deschide meniul drepata sus si selecteaza modelul Dacia Bigster, si trece prin toate taburile de prezentare a calitatilor, validand pt fiecare tab textul
+
         HomePage homePage = new HomePage(getDriver());
         OverviewBigsterPage overviewBigsterPage = new OverviewBigsterPage(getDriver());
 

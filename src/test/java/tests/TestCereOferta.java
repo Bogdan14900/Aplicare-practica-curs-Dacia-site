@@ -13,6 +13,10 @@ public class TestCereOferta extends Hooks {
     @Test
     public void metodaTest() {
 
+        //Scurta descriere test:
+        //Acest test selecteaza modelul Dacia Sandero si cere o oferta pentru el pentru localitatea Bucuresti, selecteaza primul dealer disponibil
+        //si introduce datele clientului in formular.
+
         HomePage homePage = new HomePage(getDriver());
         OfertePage ofertePage = new OfertePage(getDriver());
 
